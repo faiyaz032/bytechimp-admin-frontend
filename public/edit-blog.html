@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>ByteChimp | Dashboard</title>
+      <title>ByteChimp | Blog Add</title>
 
       <!-- Google Font: Source Sans Pro -->
       <link
@@ -12,31 +12,15 @@
       />
       <!-- Font Awesome -->
       <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
-      <!-- Ionicons -->
-      <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
       <!-- Tempusdominus Bootstrap 4 -->
       <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" />
-      <!-- iCheck -->
-      <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css" />
-      <!-- JQVMap -->
-      <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css" />
       <!-- Theme style -->
       <link rel="stylesheet" href="dist/css/adminlte.min.css" />
-      <!-- overlayScrollbars -->
-      <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css" />
-      <!-- Daterange picker -->
-      <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css" />
-      <!-- summernote -->
-      <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css" />
       <script src="./authCheck.js"></script>
    </head>
-   <body class="hold-transition sidebar-mini layout-fixed">
+   <body class="hold-transition sidebar-mini">
+      <!-- Site wrapper -->
       <div class="wrapper">
-         <!-- Preloader -->
-         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60" />
-         </div>
-
          <!-- Navbar -->
          <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
@@ -45,7 +29,7 @@
                   <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                </li>
                <li class="nav-item d-none d-sm-inline-block">
-                  <a href="index.html" class="nav-link">Home</a>
+                  <a href="../../index.html" class="nav-link">Home</a>
                </li>
                <li class="nav-item d-none d-sm-inline-block">
                   <a href="#" class="nav-link">Contact</a>
@@ -92,7 +76,7 @@
                         <!-- Message Start -->
                         <div class="media">
                            <img
-                              src="dist/img/user1-128x128.jpg"
+                              src="../../dist/img/user1-128x128.jpg"
                               alt="User Avatar"
                               class="img-size-50 mr-3 img-circle"
                            />
@@ -112,7 +96,7 @@
                         <!-- Message Start -->
                         <div class="media">
                            <img
-                              src="dist/img/user8-128x128.jpg"
+                              src="../../dist/img/user8-128x128.jpg"
                               alt="User Avatar"
                               class="img-size-50 img-circle mr-3"
                            />
@@ -132,7 +116,7 @@
                         <!-- Message Start -->
                         <div class="media">
                            <img
-                              src="dist/img/user3-128x128.jpg"
+                              src="../../dist/img/user3-128x128.jpg"
                               alt="User Avatar"
                               class="img-size-50 img-circle mr-3"
                            />
@@ -184,13 +168,7 @@
                   </a>
                </li>
                <li class="nav-item">
-                  <a
-                     class="nav-link"
-                     data-widget="control-sidebar"
-                     data-controlsidebar-slide="true"
-                     href="#"
-                     role="button"
-                  >
+                  <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
                      <i class="fas fa-th-large"></i>
                   </a>
                </li>
@@ -297,36 +275,74 @@
          <!-- Content Wrapper. Contains page content -->
          <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-            <div class="content-header">
+            <section class="content-header">
                <div class="container-fluid">
                   <div class="row mb-2">
                      <div class="col-sm-6">
-                        <h1 class="m-0">View Blogs</h1>
+                        <h1>Blog Edit</h1>
                      </div>
-                     <!-- /.col -->
                      <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                           <li class="breadcrumb-item active">Dashboard v1</li>
                         </ol>
                      </div>
-                     <!-- /.col -->
                   </div>
-                  <!-- /.row -->
                </div>
                <!-- /.container-fluid -->
-            </div>
-            <!-- /.content-header -->
+            </section>
 
-            <div class="show-blog"></div>
+            <!-- Main content -->
+            <section class="content">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="card card-primary">
+                        <div class="card-header">
+                           <h3 class="card-title">General</h3>
 
+                           <div class="card-tools">
+                              <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                 <i class="fas fa-minus"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="card-body">
+                           <div class="form-group">
+                              <label for="inputName">Blog Name</label>
+                              <input type="text" id="inputName" class="form-control" />
+                           </div>
+                           <div class="form-group">
+                              <label for="inputImage">Image</label>
+                              <input type="file" id="inputImage" class="form-control" />
+                           </div>
+                           <div class="form-group">
+                              <label for="inputBlog">Blog body</label>
+                              <textarea name="editor1" id="editor1" class="inputBlog form-control" rows="4"></textarea>
+                           </div>
+                           <div class="form-group">
+                              <label for="inputCategory">Category</label>
+                              <select id="inputCategory" class="form-control custom-select"></select>
+                           </div>
+                        </div>
+                        <!-- /.card-body -->
+                     </div>
+                     <!-- /.card -->
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-12">
+                     <a href="#" class="btn btn-secondary">Cancel</a>
+                     <input type="submit" id="create-blog-button" value="Update Blog" class="btn btn-success" />
+                  </div>
+               </div>
+            </section>
             <!-- /.content -->
          </div>
          <!-- /.content-wrapper -->
+
          <footer class="main-footer">
+            <div class="float-right d-none d-sm-block"><b>Version</b> 3.2.0-rc</div>
             <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
             All rights reserved.
-            <div class="float-right d-none d-sm-inline-block"><b>Version</b> 3.2.0-rc</div>
          </footer>
 
          <!-- Control Sidebar -->
@@ -338,24 +354,18 @@
       <!-- ./wrapper -->
 
       <!-- jQuery -->
-      <script src="plugins/jquery/jquery.min.js"></script>
-      <!-- jQuery UI 1.11.4 -->
-      <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-      <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-      <script>
-         $.widget.bridge('uibutton', $.ui.button);
-      </script>
+      <script src="../../plugins/jquery/jquery.min.js"></script>
       <!-- Bootstrap 4 -->
-      <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
       <!-- AdminLTE App -->
-      <script src="dist/js/adminlte.js"></script>
+      <script src="../../dist/js/adminlte.min.js"></script>
       <!-- AdminLTE for demo purposes -->
 
-      <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-      <script src="dist/js/pages/dashboard.js"></script>
-      <script>
-         const slug = window.location.search.split('?').join('').trim();
+      <script type="text/javascript">
+         CKEDITOR.replace('editor1');
+
+         const [, slug] = window.location.search.split('=');
 
          fetch(`https://bytechimp-api.herokuapp.com/api/blog/${slug}`, { method: 'GET' })
             .then((response) => {
@@ -363,12 +373,56 @@
             })
             .then((data) => {
                const { blog } = data;
-               console.log(blog);
-               html = ` <h1>${blog.title}</h1>
-               <img width="50%" src="${blog.imageAccessLink}" alt="" />
-               <p>${blog.description}</p>`;
-               document.querySelector('.show-blog').insertAdjacentHTML('beforeend', html);
+
+               document.querySelector('#inputName').value = blog.title;
+               CKEDITOR.instances['editor1'].setData(blog.description);
+
+               fetch('https://bytechimp-api.herokuapp.com/api/category', {
+                  method: 'GET',
+               })
+                  .then((response) => response.json())
+                  .then((data) => {
+                     const { categories } = data;
+                     const select = document.querySelector('#inputCategory');
+
+                     categories.forEach((category, i) => {
+                        const html = `<option>${category.name}</option>`;
+
+                        select.insertAdjacentHTML('beforeend', html);
+                        select.value = blog.category;
+                     });
+                  });
             });
+
+         const button = document.querySelector('#create-blog-button');
+         button.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const image = document.querySelector('input[type="file"]').files[0];
+            const title = document.querySelector('#inputName').value;
+
+            const category = document.querySelector('#inputCategory').value;
+
+            const description = CKEDITOR.instances.editor1.getData();
+
+            const data = new FormData();
+            data.append('title', title);
+            data.append('description', description);
+            data.append('image', image);
+            data.append('category', category);
+
+            const requestOptions = {
+               method: 'PUT',
+               body: data,
+            };
+
+            fetch(`https://bytechimp-api.herokuapp.com/api/blog/${slug}`, requestOptions)
+               .then((response) => response.json())
+               .then((res) => {
+                  if (res.status === 'success') alert(res.message);
+                  alert(res.message);
+               });
+         });
       </script>
    </body>
 </html>
